@@ -7,7 +7,7 @@ Have you ever wandered which is more efficient strategy to handle item expiratio
 - use one timer to check all items regularly
 
 Here we have two scripts that test these two approaches.
-Each script creates a new item on each event loop iteration (using `setImmediate`). This allows pending timers to execute between item creation.
+Each script creates a new item on each event loop iteration (using `setImmediate`). This allows pending timers to execute between item creation. See [The Node.js Event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/) for more details.
 
 Each item stores the time it was created and the time it was deactivated (due to expiration).
 
