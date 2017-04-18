@@ -3,7 +3,7 @@
 Evaluate timer performance in Node.js.
 
 Have you ever wandered which is more efficient strategy to handle item expiration in node?
-- use a separate timer for eachitem
+- use a separate timer for each item
 - use one timer to check all items regularly
 
 Here we have two scripts that test these two approaches.
