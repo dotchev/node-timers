@@ -3,6 +3,7 @@
 const nItems = +process.argv[2] || 1e7;
 const expiryTime = +process.argv[3] || 2000;
 const items = [];
+const MB = 1024 * 1024;
 
 module.exports = {
   run,
@@ -48,5 +49,5 @@ function complete() {
   console.log('Expired items: %d (%d%%)', finished, finished / items.length * 100);
   console.log('Average item expiration time: %d ms', time / finished);
   console.log('Target item expiration time: %d ms', expiryTime);
-  console.log('Proces memory: %d MB', Math.round(process.memoryUsage().rss / (2**20)));
+  console.log('Proces memory: %d MB', Math.round(process.memoryUsage().rss / MB));
 }
